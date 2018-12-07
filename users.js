@@ -1,9 +1,12 @@
 let express = require("express");
 let router = express.Router();
 
-// /user - JSON list of all users.
-// /user/:id - JSON of a single user with the given ID.
-router.get("/user/:id", (req, res) => {
+router.get("/user", (req, res) => {// /user - JSON list of all users.
+  res.json({
+
+  })
+});
+router.get("/user/:id", (req, res) => {// /user/:id - JSON of a single user with the given ID.
   res.json({
   // req.paramas.id
   });
