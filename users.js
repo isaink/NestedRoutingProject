@@ -1,15 +1,16 @@
 let express = require("express");
 let router = express.Router();
+let {users} = require("./data.js");
 
-router.get("/user", (req, res) => {// /user - JSON list of all users.
+router.get("/", (req, res) => {// /user - JSON list of all users.
   res.json({
-
+    users,
   })
 });
-router.get("/user/:id", (req, res) => {// /user/:id - JSON of a single user with the given ID.
-  res.json({
-  // req.paramas.id
-  });
+router.get("/:id", (req, res) => {// /user/:id - JSON of a single user with the given ID.
+  let id = req.params.id;
+  res.json({users}.users[id -1]);
 });
 
 module.exports = router;
+``
